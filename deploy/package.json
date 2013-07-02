@@ -11,7 +11,8 @@
         "params": {
           "email": "owneremail@email.com",
           "password": "password",
-          "password_confirmation": "password"
+          "password_confirmation": "password",
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -20,7 +21,8 @@
         "method": "PUT",
         "endpoint": "users/{USER}",
         "params": {
-          "is_developer": true
+          "is_developer": true,
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -28,35 +30,45 @@
         "description": "Get user info",
         "method": "GET",
         "endpoint": "users/{USER}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "reset-token",
         "description": "Reset a user token",
         "method": "GET",
         "endpoint": "users/reset_token",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-user-events",
         "description": "Get user events",
         "method": "GET",
         "endpoint": "users/{USER}/events",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-user-event",
         "description": "Get an user event",
         "method": "GET",
         "endpoint": "users/{USER}/events/{EVENT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "destroy-user",
         "description": "Remove user account",
         "method": "DELETE",
         "endpoint": "users",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "create-suscription",
@@ -92,35 +104,44 @@
               "postal_code": "70800"
             }
           }
-        }
+        },
+        "token": "rFSorOipD0j61sKLsNq"
       },
       {
         "id": "show-suscription",
         "description": "Get a subscription info",
         "method": "GET",
         "endpoint": "subscriptions/{SUBSCRIPTION}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-event-subscription",
         "description": "Get an event subscription",
         "method": "GET",
         "endpoint": "subscriptions/{SUBSCRIPTION}/events/{EVENT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-event-subscriptions",
         "description": "Get event subscriptions",
         "method": "GET",
         "endpoint": "subscriptions/{SUBSCRIPTION}/events",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "destroy-subscription",
         "description": "Remove a subscription",
         "method": "DELETE",
         "endpoint": "subscriptions/{SUBSCRIPTION}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "create-company",
@@ -128,7 +149,8 @@
         "method": "POST",
         "endpoint": "companies",
         "params": {
-          "name": "Company2"
+          "name": "Company2",
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -137,7 +159,8 @@
         "method": "PUT",
         "endpoint": "companies/{COMPANY}",
         "params": {
-          "name": "Company3"
+          "name": "Company3",
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -145,35 +168,45 @@
         "description": "Get a company info",
         "method": "GET",
         "endpoint": "companies/{COMPANY}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-company-users",
         "description": "Get the company users",
         "method": "GET",
         "endpoint": "admin/users",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-company-event",
         "description": "Get a company event",
         "method": "GET",
         "endpoint": "companies/{COMPANY}/events/{EVENT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-company-events",
         "description": "Get company events",
         "method": "GET",
         "endpoint": "companies/{COMPANY}/events",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "destroy-company",
         "description": "Remove a company",
         "method": "DELETE",
         "endpoint": "companies/{COMPANY}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "create-company-charge",
@@ -207,7 +240,8 @@
             "country": "Mexico",
             "success_url": "http://www.mysite.com/success",
             "fail_url": "http://www.mysite.com/fail"
-          }
+          },
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -223,7 +257,8 @@
             "_type": "OxxoPayment",
             "expiry_date": "121214",
             "product_description": "A great product"
-          }
+          },
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -231,42 +266,54 @@
         "description": "Get the oxxo barcode",
         "method": "GET",
         "endpoint": "charges/{CHARGE}/barcode",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-charge",
         "description": "Get a charge",
         "method": "GET",
         "endpoint": "charges/{CHARGE}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-company-charges",
         "description": "Get the company charges",
         "method": "GET",
         "endpoint": "charges",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-charge-event",
         "description": "Get a charge event",
         "method": "GET",
         "endpoint": "charges/{CHARGE}/events/{EVENT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-charge-events",
         "description": "Get charge events",
         "method": "GET",
         "endpoint": "charges/{CHARGE}/events",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "destroy-charge",
         "description": "Remove a charge",
         "method": "DELETE",
         "endpoint": "charges/{CHARGE}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "create-company-account",
@@ -276,7 +323,8 @@
         "params": {
           "company_id": "513a38b8cfc26cb230000018",
           "user_id": "513b770bcfc26c6e59000001",
-          "role": "employee"
+          "role": "employee",
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -285,7 +333,8 @@
         "method": "PUT",
         "endpoint": "user_accounts/{ACCOUNT}",
         "params": {
-          "role": "consultant"
+          "role": "consultant",
+          "token": "rFSorOipD0j61sKLsNq"
         }
       },
       {
@@ -293,35 +342,45 @@
         "description": "Get company accounts",
         "method": "GET",
         "endpoint": "user_accounts",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-account",
         "description": "Get an account",
         "method": "GET",
         "endpoint": "user_accounts",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "show-account-event",
         "description": "Get an account event",
         "method": "GET",
         "endpoint": "user_accounts/{ACCOUNT}/events/{EVENT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "index-account-events",
         "description": "Get account events",
         "method": "GET",
         "endpoint": "user_accounts/{ACCOUNT}/events",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       },
       {
         "id": "destroy-company-account",
         "description": "Remove a company account",
         "method": "DELETE",
         "endpoint": "user_accounts/{ACCOUNT}",
-        "params": {}
+        "params": {
+          "token": "rFSorOipD0j61sKLsNq"
+        }
       }
     ],
     "i18n": {
