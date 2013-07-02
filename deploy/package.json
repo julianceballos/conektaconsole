@@ -1,0 +1,390 @@
+{
+  "settings": {
+    "storage_engine": "localStorage",
+    "api": "https://www.pagosconekta.com/",
+    "endpoints": [
+      {
+        "id": "create-user",
+        "description": "Create a new user",
+        "method": "POST",
+        "endpoint": "users",
+        "params": {
+          "email": "owneremail@email.com",
+          "password": "password",
+          "password_confirmation": "password"
+        }
+      },
+      {
+        "id": "update-user",
+        "description": "Update user info",
+        "method": "PUT",
+        "endpoint": "users/{USER}",
+        "params": {
+          "is_developer": true
+        }
+      },
+      {
+        "id": "show-user",
+        "description": "Get user info",
+        "method": "GET",
+        "endpoint": "users/{USER}",
+        "params": {}
+      },
+      {
+        "id": "reset-token",
+        "description": "Reset a user token",
+        "method": "GET",
+        "endpoint": "users/reset_token",
+        "params": {}
+      },
+      {
+        "id": "index-user-events",
+        "description": "Get user events",
+        "method": "GET",
+        "endpoint": "users/{USER}/events",
+        "params": {}
+      },
+      {
+        "id": "show-user-event",
+        "description": "Get an user event",
+        "method": "GET",
+        "endpoint": "users/{USER}/events/{EVENT}",
+        "params": {}
+      },
+      {
+        "id": "destroy-user",
+        "description": "Remove user account",
+        "method": "DELETE",
+        "endpoint": "users",
+        "params": {}
+      },
+      {
+        "id": "create-suscription",
+        "description": "Create a suscription",
+        "method": "POST",
+        "endpoint": "subscriptions",
+        "params": {
+          "amount": 100,
+          "currency": "USD",
+          "company_name": "Mi Compañía",
+          "consumer_email": "consumer@email.com",
+          "period_unit": "day",
+          "period_length": "2",
+          "charges_per_period": "3",
+          "credit_card_payment": {
+            "name": "John Doe",
+            "email": "consumer@email.com",
+            "brand": "visa",
+            "last4": "4111111111111111",
+            "security_code": "123",
+            "exp_month": "01",
+            "exp_year": "20",
+            "country": "Mexico",
+            "success_url": "http://www.mysite.com/success",
+            "fail_url": "http://www.mysite.com/fail",
+            "address": {
+              "address1": "Mi calle 303",
+              "address2": "",
+              "colonia": "",
+              "city": "Monterrey",
+              "state": "Nuevo Leon",
+              "country": "Mexico",
+              "postal_code": "70800"
+            }
+          }
+        }
+      },
+      {
+        "id": "show-suscription",
+        "description": "Get a subscription info",
+        "method": "GET",
+        "endpoint": "subscriptions/{SUBSCRIPTION}",
+        "params": {}
+      },
+      {
+        "id": "show-event-subscription",
+        "description": "Get an event subscription",
+        "method": "GET",
+        "endpoint": "subscriptions/{SUBSCRIPTION}/events/{EVENT}",
+        "params": {}
+      },
+      {
+        "id": "index-event-subscriptions",
+        "description": "Get event subscriptions",
+        "method": "GET",
+        "endpoint": "subscriptions/{SUBSCRIPTION}/events",
+        "params": {}
+      },
+      {
+        "id": "destroy-subscription",
+        "description": "Remove a subscription",
+        "method": "DELETE",
+        "endpoint": "subscriptions/{SUBSCRIPTION}",
+        "params": {}
+      },
+      {
+        "id": "create-company",
+        "description": "Create a company",
+        "method": "POST",
+        "endpoint": "companies",
+        "params": {
+          "name": "Company2"
+        }
+      },
+      {
+        "id": "update-company",
+        "description": "Update company",
+        "method": "PUT",
+        "endpoint": "companies/{COMPANY}",
+        "params": {
+          "name": "Company3"
+        }
+      },
+      {
+        "id": "show-company",
+        "description": "Get a company info",
+        "method": "GET",
+        "endpoint": "companies/{COMPANY}",
+        "params": {}
+      },
+      {
+        "id": "index-company-users",
+        "description": "Get the company users",
+        "method": "GET",
+        "endpoint": "admin/users",
+        "params": {}
+      },
+      {
+        "id": "show-company-event",
+        "description": "Get a company event",
+        "method": "GET",
+        "endpoint": "companies/{COMPANY}/events/{EVENT}",
+        "params": {}
+      },
+      {
+        "id": "index-company-events",
+        "description": "Get company events",
+        "method": "GET",
+        "endpoint": "companies/{COMPANY}/events",
+        "params": {}
+      },
+      {
+        "id": "destroy-company",
+        "description": "Remove a company",
+        "method": "DELETE",
+        "endpoint": "companies/{COMPANY}",
+        "params": {}
+      },
+      {
+        "id": "create-company-charge",
+        "description": "Create a company charge",
+        "method": "POST",
+        "endpoint": "charges",
+        "params": {
+          "amount": 100,
+          "external_reference_id": "lastreference",
+          "currency": "USD",
+          "shipping_address": {
+            "address1": "1234 My Street",
+            "address2": "Apt 1",
+            "colonia": "",
+            "city": "Ottawa",
+            "state": "ON",
+            "country": "Canada",
+            "postal_code": "K1C2N6",
+            "telephone": "84589816",
+            "carrier": "estafeta"
+          },
+          "payment_method": {
+            "_type": "CreditCard",
+            "name": "John Doe",
+            "email": "owneremail@email.com",
+            "brand": "visa",
+            "number": "4111111111111111",
+            "security_code": "123",
+            "exp_month": "01",
+            "exp_year": "2014",
+            "country": "Mexico",
+            "success_url": "http://www.mysite.com/success",
+            "fail_url": "http://www.mysite.com/fail"
+          }
+        }
+      },
+      {
+        "id": "create-company-charge-oxxo",
+        "description": "Create a company charge via oxxo",
+        "method": "POST",
+        "endpoint": "charges",
+        "params": {
+          "amount": 100,
+          "external_reference_id": "lastreference",
+          "currency": "USD",
+          "payment_method": {
+            "_type": "OxxoPayment",
+            "expiry_date": "121214",
+            "product_description": "A great product"
+          }
+        }
+      },
+      {
+        "id": "show-barcode-oxxo",
+        "description": "Get the oxxo barcode",
+        "method": "GET",
+        "endpoint": "charges/{CHARGE}/barcode",
+        "params": {}
+      },
+      {
+        "id": "show-charge",
+        "description": "Get a charge",
+        "method": "GET",
+        "endpoint": "charges/{CHARGE}",
+        "params": {}
+      },
+      {
+        "id": "index-company-charges",
+        "description": "Get the company charges",
+        "method": "GET",
+        "endpoint": "charges",
+        "params": {}
+      },
+      {
+        "id": "show-charge-event",
+        "description": "Get a charge event",
+        "method": "GET",
+        "endpoint": "charges/{CHARGE}/events/{EVENT}",
+        "params": {}
+      },
+      {
+        "id": "index-charge-events",
+        "description": "Get charge events",
+        "method": "GET",
+        "endpoint": "charges/{CHARGE}/events",
+        "params": {}
+      },
+      {
+        "id": "destroy-charge",
+        "description": "Remove a charge",
+        "method": "DELETE",
+        "endpoint": "charges/{CHARGE}",
+        "params": {}
+      },
+      {
+        "id": "create-company-account",
+        "description": "Create a company account",
+        "method": "POST",
+        "endpoint": "user_accounts",
+        "params": {
+          "company_id": "513a38b8cfc26cb230000018",
+          "user_id": "513b770bcfc26c6e59000001",
+          "role": "employee"
+        }
+      },
+      {
+        "id": "update-company-account",
+        "description": "Update a company account",
+        "method": "PUT",
+        "endpoint": "user_accounts/{ACCOUNT}",
+        "params": {
+          "role": "consultant"
+        }
+      },
+      {
+        "id": "index-company-accounts",
+        "description": "Get company accounts",
+        "method": "GET",
+        "endpoint": "user_accounts",
+        "params": {}
+      },
+      {
+        "id": "show-account",
+        "description": "Get an account",
+        "method": "GET",
+        "endpoint": "user_accounts",
+        "params": {}
+      },
+      {
+        "id": "show-account-event",
+        "description": "Get an account event",
+        "method": "GET",
+        "endpoint": "user_accounts/{ACCOUNT}/events/{EVENT}",
+        "params": {}
+      },
+      {
+        "id": "index-account-events",
+        "description": "Get account events",
+        "method": "GET",
+        "endpoint": "user_accounts/{ACCOUNT}/events",
+        "params": {}
+      },
+      {
+        "id": "destroy-company-account",
+        "description": "Remove a company account",
+        "method": "DELETE",
+        "endpoint": "user_accounts/{ACCOUNT}",
+        "params": {}
+      }
+    ],
+    "i18n": {
+      "languages": [
+        "en"
+      ],
+      "files": [
+        "js",
+        "html",
+        "hbs"
+      ],
+      "blacklist": [
+        ".git",
+        "images",
+        "icons",
+        "stylesheets",
+        "libraries"
+      ]
+    },
+    "deploy": {
+      "folders": [
+        "icons",
+        "fonts",
+        "images",
+        "languages"
+      ]
+    },
+    "environment": {
+      "core": [
+        "app",
+        "contrib/modernizr"
+      ],
+      "libraries": [
+        "jquery",
+        "bootstrap",
+        "underscore",
+        "backbone",
+        "handlebars",
+        "backbone.extensions",
+        "globalize",
+        "codemirror",
+        "placeholder",
+        "runmode",
+        "matchbrackets",
+        "closebrackets",
+        "active-line",
+        "javascript",
+        "helpers",
+        "apitest"
+      ],
+      "main_files": [
+        "listeners",
+        "main"
+      ],
+      "applications": [
+        "root"
+      ]
+    }
+  },
+  "name": "apiconsole",
+  "description": "API Console built with wonka.js",
+  "version": "0.0.1",
+  "author": "",
+  "homepage": "",
+  "_id": "apiconsole@0.0.1"
+}
